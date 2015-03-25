@@ -18,7 +18,9 @@ This is a list of the currently implemented clients:
 This module uses the [bluebird](https://github.com/petkaantonov/bluebird) promises library and it's
 [.promisifyAll](https://github.com/petkaantonov/bluebird/blob/master/API.md#promisepromisifyallobject-target--object-options---object)
 method to wrap instances of AWS SDK clients in order to provide promise compliant alternative
-methods to all of the client's node style callback methods.
+methods to all of the client's node style callback methods. All the methods are suffixed with "Async".
+
+iam.getRole => iam.getRoleAsync
 
 #### Usage
 
