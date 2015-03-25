@@ -12,6 +12,7 @@ at this point. If you want to add one, it's really easy. Pretty please see the c
 This is a list of the currently implemented clients:
 
 - [IAM](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/IAM.html)
+- [S3](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html)
 
 #### What this module does.
 
