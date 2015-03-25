@@ -8,7 +8,7 @@ Provides Promises/A+ compliant versions of all your favorite AWS SDK clients.
 
 #### Disclaimer
 
-This module is v0.2.0 and is a work in progress. Not all of the AWS SDK clients are wrapped
+This module is a work in progress. Not all of the AWS SDK clients are wrapped
 at this point. If you want to add one, it's really easy. Pretty please see the contribution section below
 
 This is a list of the currently implemented clients:
