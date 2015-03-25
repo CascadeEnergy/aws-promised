@@ -14,7 +14,7 @@ test('setup', function(t) {
   };
   Bluebird = { promisifyAll: sinon.stub() };
 
-  clientsFactory = proxyquire('../index', {
+  clientsFactory = proxyquire('../', {
     'aws-sdk': AWS,
     bluebird: Bluebird
   });
