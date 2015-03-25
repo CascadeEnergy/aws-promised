@@ -4,6 +4,8 @@
 
 Provides Promises/A+ compliant versions of all your favorite AWS SDK clients.
 
+[![NPM](https://nodei.co/npm/aws-promised.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/aws-promised/)
+
 #### Disclaimer
 
 This module is v0.0.1 and is a work in progress. Not all of the AWS SDK clients are wrapped
@@ -21,24 +23,26 @@ This module uses the [bluebird](https://github.com/petkaantonov/bluebird) promis
 method to wrap instances of AWS SDK clients in order to provide promise compliant alternative
 methods to all of the client's node style callback methods. All the methods are suffixed with "Async".
 
-iam.getRole => iam.getRoleAsync
+`s3.getObject` : `s3.getObjectAsync`
 
 #### Usage
 
 ```javascript
-var awsPromised = require('aws-promised');
-var iam = awsPromised.getIam({region: 'us-west-2'});
+var getS3 = require('aws-promised').getS3;
+var s3 = getS3();
 
-iam
-  .getRoleAsync({ RoleName: 'myRole' })
-  .then(function(data) { 
-    // The iam.getRole response data describing 'myRole'
-    console.log(data);
-  })
-  .catch(function(err) {
-    // This handles getRole errors, i.e. When 'myRole' doesn't exist.
-    console.error(err);
-  });
+var params = {
+  Bucket: 'my-bucket-name',
+  Key: 'foo.txt'
+};
+
+s3.getObjectAsync(params).then(console.log).catch(console.error);
+```
+
+#### install
+
+```
+npm i --save aws-promised
 ```
 
 #### Contributing
