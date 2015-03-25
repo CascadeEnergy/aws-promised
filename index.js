@@ -25,5 +25,12 @@ module.exports = {
    *
    * @param {object} options The AWS.S3 constructor options.
    */
-  getS3: require('./lib/getS3')
+  getS3: require('./lib/getS3'),
+
+  /**
+   * Returns a Promises compliant AWS.EC2 api.
+   *
+   * @param {object} options The AWS.EC2 constructor options.
+   */
+  getEC2: require('./lib/getEC2')
 };
