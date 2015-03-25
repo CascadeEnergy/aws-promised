@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/nackjicholson/aws-promised.svg)](https://travis-ci.org/nackjicholson/aws-promised)
+[![Build Status](https://travis-ci.org/CascadeEnergy/aws-promised.svg)](https://travis-ci.org/CascadeEnergy/aws-promised)
 
 # aws-promised
 
