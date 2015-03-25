@@ -1,0 +1,26 @@
+{
+  "name": "aws-promised",
+  "version": "0.0.1",
+  "description": "Provides Promises/A+ compliant version of all your favorite AWS SDK clients.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nackjicholson/aws-promised.git"
+  },
+  "keywords": [
+    "aws-sdk",
+    "bluebird",
+    "aws",
+    "promises",
+    "A+"
+  ],
+  "author": "Will Vaughn <willieviseoae@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nackjicholson/aws-promised/issues"
+  },
+  "homepage": "https://github.com/nackjicholson/aws-promised"
+}
