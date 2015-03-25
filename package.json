@@ -22,5 +22,15 @@
   "bugs": {
     "url": "https://github.com/nackjicholson/aws-promised/issues"
   },
-  "homepage": "https://github.com/nackjicholson/aws-promised"
+  "homepage": "https://github.com/nackjicholson/aws-promised",
+  "dependencies": {
+    "aws-sdk": "^2.1.19",
+    "bluebird": "^2.9.14",
+    "lodash": "^3.5.0"
+  },
+  "devDependencies": {
+    "proxyquire": "^1.4.0",
+    "sinon": "^1.14.1",
+    "tape": "^3.5.0"
+  }
 }
