@@ -7,7 +7,10 @@
  * This factory memoizes the api objects it returns. If the requested Api does
  * not already exist it is created, otherwise the existing one is returned.
  *
- * @type {{getMetadataService: Function}}
+ * @type {{
+ *  getIam: (*|exports|module.exports),
+ *  getS3: (*|exports|module.exports)
+ * }}
  */
 module.exports = {
   /**
@@ -15,5 +18,12 @@ module.exports = {
    *
    * @param {object} options The AWS.IAM constructor options.
    */
-  getIam: require('./lib/getIam')
+  getIam: require('./lib/getIam'),
+
+  /**
+   * Returns a Promises compliant AWS.S3 api.
+   *
+   * @param {object} options The AWS.S3 constructor options.
+   */
+  getS3: require('./lib/getS3')
 };
