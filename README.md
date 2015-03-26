@@ -20,18 +20,27 @@ This is a list of the currently implemented clients:
 
 #### What this module does.
 
-This module uses the [bluebird](https://github.com/petkaantonov/bluebird) promises library and it's
-[.promisifyAll](https://github.com/petkaantonov/bluebird/blob/master/API.md#promisepromisifyallobject-target--object-options---object)
-method to wrap instances of AWS SDK clients in order to provide promise compliant alternative
-methods to all of the client's node style callback methods. All the methods are suffixed with "Async".
+Basically,
 
-`s3.getObject` : `s3.getObjectAsync`
+**Makes**
+
+`s3.getObject` -- A node style callback API
+
+**Into**
+
+`s3.getObjectAsync` -- A Promises/A+ style API
+
+It decorates [aws-sdk](https://github.com/aws/aws-sdk-js) client instances with "Async" suffixed methods.
+Internally `aws-promised` uses
+[bluebird](https://github.com/petkaantonov/bluebird) and it's
+[.promisifyAll](https://github.com/petkaantonov/bluebird/blob/master/API.md#promisepromisifyallobject-target--object-options---object)
+to perform this client decoration.
 
 #### Usage
 
 ```javascript
-var getS3 = require('aws-promised').getS3;
-var s3 = getS3();
+var awsPromised = require('aws-promised');
+var s3 = awsPromised.getS3();
 
 var params = {
   Bucket: 'my-bucket-name',
@@ -41,13 +50,23 @@ var params = {
 s3.getObjectAsync(params).then(console.log).catch(console.error);
 ```
 
+#### Node-style modules
+
+Any client factory method is available as a stand-alone require-able module.
+
+In the above Usage example the `getS3` method can be required directly.
+
+```
+var getS3 = require('aws-promised/getS3');
+```
+
 #### install
 
 ```
-npm i --save aws-promised
+npm install --save aws-promised
 ```
 
-#### Contributing
+### Contributing
 
 I'm adding AWS clients to this module as I need them, and therefore the one you may need might be missing.
 They're all pretty much the same. You can look at the source for any client, and it's associated test and can likely
