@@ -36,6 +36,20 @@ Internally `aws-promised` uses
 [.promisifyAll](https://github.com/petkaantonov/bluebird/blob/master/API.md#promisepromisifyallobject-target--object-options---object)
 to perform this client decoration.
 
+The nice thing about this approach is that it only adds new methods to the client. All of the orginal aws-sdk methods
+are still available for use when you need them.
+
+For instance, the "Async" promised methods return promises and not instances of
+[AWS.Request](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Request.html). So when you want to do something
+with AWS.Request (like open up a Node.js data stream from an s3 file) you're still able to use the original `getObject` 
+method to create the stream.
+
+```
+var s3 = require('aws-promised/getS3')();
+var params = { Bucket: 'foo', Key: 'bar.txt' };
+var fileStream = s3.getObject(param).createReadStream();
+```
+
 #### Usage
 
 ```javascript
