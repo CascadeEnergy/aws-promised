@@ -60,6 +60,12 @@ In the above Usage example the `getS3` method can be required directly.
 var getS3 = require('aws-promised/getS3');
 ```
 
+Or even...
+
+```
+var s3 = require('aws-promised/getS3')();
+```
+
 #### install
 
 ```
