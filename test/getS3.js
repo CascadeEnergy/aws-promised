@@ -7,7 +7,7 @@ var test = require('tape');
 test('promisify and cache S3 client', function(t) {
   var AWS = { S3: sinon.stub() };
   var Bluebird = { promisifyAll: sinon.stub() };
-  var getS3 = proxyquire('../../lib/getS3', {
+  var getS3 = proxyquire('../getS3', {
     'aws-sdk': AWS,
     bluebird: Bluebird
   });

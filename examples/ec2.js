@@ -1,6 +1,6 @@
 'use strict';
 
-var getEC2 = require('../index').getEC2;
+var getEC2 = require('../getEC2');
 var ec2 = getEC2({region: 'us-west-2'});
 
 var groupName = 'global-www';

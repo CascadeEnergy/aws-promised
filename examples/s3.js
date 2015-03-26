@@ -1,6 +1,6 @@
 'use strict';
 
-var getS3 = require('../../').getS3;
+var getS3 = require('../getS3');
 var s3 = getS3();
 
 var params = {
