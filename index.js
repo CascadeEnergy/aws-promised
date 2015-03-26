@@ -8,29 +8,30 @@
  * not already exist it is created, otherwise the existing one is returned.
  *
  * @type {{
- *  getIam: (*|exports|module.exports),
+ *  getEC2: (*|exports|module.exports),
+ *  getIAM: (*|exports|module.exports),
  *  getS3: (*|exports|module.exports)
  * }}
  */
 module.exports = {
   /**
+   * Returns a Promises compliant AWS.EC2 api.
+   *
+   * @param {object} options The AWS.EC2 constructor options.
+   */
+  getEC2: require('./lib/getEC2'),
+
+  /**
    * Returns a Promises compliant AWS.IAM api.
    *
    * @param {object} options The AWS.IAM constructor options.
    */
-  getIam: require('./lib/getIam'),
+  getIAM: require('./lib/getIAM'),
 
   /**
    * Returns a Promises compliant AWS.S3 api.
    *
    * @param {object} options The AWS.S3 constructor options.
    */
-  getS3: require('./lib/getS3'),
-
-  /**
-   * Returns a Promises compliant AWS.EC2 api.
-   *
-   * @param {object} options The AWS.EC2 constructor options.
-   */
-  getEC2: require('./lib/getEC2')
+  getS3: require('./lib/getS3')
 };

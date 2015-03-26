@@ -7,7 +7,7 @@ var test = require('tape');
 test('promisify and cache IAM client', function(t) {
   var AWS = { IAM: sinon.stub() };
   var Bluebird = { promisifyAll: sinon.stub() };
-  var getIam = proxyquire('../../lib/getIam', {
+  var getIAM = proxyquire('../../lib/getIAM', {
     'aws-sdk': AWS,
     bluebird: Bluebird
   });
@@ -20,8 +20,8 @@ test('promisify and cache IAM client', function(t) {
   AWS.IAM.returns(standardIam);
   Bluebird.promisifyAll.returns(promisedIam);
 
-  result = getIam(options);
-  cachedResult = getIam(options);
+  result = getIAM(options);
+  cachedResult = getIAM(options);
 
   t.ok(AWS.IAM.calledOnce, 'iam client made');
   t.notDeepEqual(AWS.IAM.args[0], options, 'options passed to AWS.IAM');
