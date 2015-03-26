@@ -40,7 +40,7 @@ to perform this client decoration.
 
 ```javascript
 var awsPromised = require('aws-promised');
-var s3 = awsPromised.getS3();
+var s3 = awsPromised.getS3({ region: 'us-west-2' });
 
 var params = {
   Bucket: 'my-bucket-name',
@@ -63,7 +63,7 @@ var getS3 = require('aws-promised/getS3');
 Or even...
 
 ```
-var s3 = require('aws-promised/getS3')();
+var s3 = require('aws-promised/getS3')({ region: 'us-west-2' });
 ```
 
 #### install
