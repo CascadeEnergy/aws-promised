@@ -19,19 +19,19 @@ module.exports = {
    *
    * @param {object} options The AWS.EC2 constructor options.
    */
-  getEC2: require('./lib/getEC2'),
+  getEC2: require('./getEC2'),
 
   /**
    * Returns a Promises compliant AWS.IAM api.
    *
    * @param {object} options The AWS.IAM constructor options.
    */
-  getIAM: require('./lib/getIAM'),
+  getIAM: require('./getIAM'),
 
   /**
    * Returns a Promises compliant AWS.S3 api.
    *
    * @param {object} options The AWS.S3 constructor options.
    */
-  getS3: require('./lib/getS3')
+  getS3: require('./getS3')
 };

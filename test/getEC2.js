@@ -7,7 +7,7 @@ var test = require('tape');
 test('promisify and cache EC2 client', function(t) {
   var AWS = { EC2: sinon.stub() };
   var Bluebird = { promisifyAll: sinon.stub() };
-  var getEC2 = proxyquire('../../lib/getEC2', {
+  var getEC2 = proxyquire('../getEC2', {
     'aws-sdk': AWS,
     bluebird: Bluebird
   });

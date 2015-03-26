@@ -7,7 +7,7 @@ var test = require('tape');
 test('promisify and cache IAM client', function(t) {
   var AWS = { IAM: sinon.stub() };
   var Bluebird = { promisifyAll: sinon.stub() };
-  var getIAM = proxyquire('../../lib/getIAM', {
+  var getIAM = proxyquire('../getIAM', {
     'aws-sdk': AWS,
     bluebird: Bluebird
   });
