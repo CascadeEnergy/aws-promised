@@ -20,9 +20,9 @@
   "author": "Will Vaughn <willieviseoae@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nackjicholson/aws-promised/issues"
+    "url": "https://github.com/CascadeEnergy/aws-promised/issues"
   },
-  "homepage": "https://github.com/nackjicholson/aws-promised",
+  "homepage": "https://github.com/CascadeEnergy/aws-promised",
   "dependencies": {
     "aws-sdk": "^2.1.19",
     "bluebird": "^2.9.14",
