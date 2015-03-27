@@ -33,5 +33,12 @@ module.exports = {
    *
    * @param {object} options The AWS.S3 constructor options.
    */
-  getS3: require('./getS3')
+  getS3: require('./getS3'),
+
+  /**
+   * Returns a Promises compliant AWS.SQS api.
+   *
+   * @param {object} options The AWS.SQS constructor options.
+   */
+  getSQS: require('./getSQS')
 };

@@ -17,3 +17,8 @@ test('getS3 is function', function(t) {
   t.plan(1);
   t.equal(typeof clientFactory.getS3, 'function');
 });
+
+test('getSQS is function', function(t) {
+  t.plan(1);
+  t.equal(typeof clientFactory.getSQS, 'function');
+})
