@@ -9,10 +9,10 @@ test('promisify and cache IAM client', function(t) {
   var standardIam = { fake: 'iamInstance' };
   var promisedIam = 'promised.iam';
   var AWS = { IAM: sinon.stub().returns(standardIam) };
-  var Bluebird = { promisifyAll: sinon.stub().returns(promisedIam) };
+  var promisifyAll = sinon.stub().returns(promisedIam);
   var getIAM = proxyquire('../getIAM', {
     'aws-sdk': AWS,
-    bluebird: Bluebird
+    './lib/promisifyAll': promisifyAll
   });
   var result = getIAM(options);
   var cachedResult = getIAM(options);
@@ -21,10 +21,10 @@ test('promisify and cache IAM client', function(t) {
   t.equal(AWS.IAM.args[0].length, 1);
   t.equal(AWS.IAM.args[0][0], options, 'options passed to AWS.IAM');
 
-  t.ok(Bluebird.promisifyAll.calledOnce, 'promisifyAll called');
-  t.equal(Bluebird.promisifyAll.args[0].length, 1);
+  t.ok(promisifyAll.calledOnce, 'promisifyAll called');
+  t.equal(promisifyAll.args[0].length, 1);
   t.equal(
-    Bluebird.promisifyAll.args[0][0],
+    promisifyAll.args[0][0],
     standardIam,
     'promisify the iam client'
   );

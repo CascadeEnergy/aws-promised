@@ -9,10 +9,10 @@ test('promisify and cache EC2 client', function(t) {
   var standardEC2 = { fake: 'ec2Instance' };
   var promisedEC2 = 'promised.ec2';
   var AWS = { EC2: sinon.stub().returns(standardEC2) };
-  var Bluebird = { promisifyAll: sinon.stub().returns(promisedEC2) };
+  var promisifyAll = sinon.stub().returns(promisedEC2);
   var getEC2 = proxyquire('../getEC2', {
     'aws-sdk': AWS,
-    bluebird: Bluebird
+    './lib/promisifyAll': promisifyAll
   });
   var result = getEC2(options);
   var cachedResult = getEC2(options);
@@ -21,10 +21,10 @@ test('promisify and cache EC2 client', function(t) {
   t.equal(AWS.EC2.args[0].length, 1);
   t.equal(AWS.EC2.args[0][0], options, 'options passed to AWS.EC2');
 
-  t.ok(Bluebird.promisifyAll.calledOnce, 'promisifyAll called');
-  t.equal(Bluebird.promisifyAll.args[0].length, 1);
+  t.ok(promisifyAll.calledOnce, 'promisifyAll called');
+  t.equal(promisifyAll.args[0].length, 1);
   t.equal(
-    Bluebird.promisifyAll.args[0][0],
+    promisifyAll.args[0][0],
     standardEC2,
     'promisify the ec2 client'
   );

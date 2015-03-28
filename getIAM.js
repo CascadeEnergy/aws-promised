@@ -1,11 +1,11 @@
 'use strict';
 
 var AWS = require('aws-sdk');
-var Bluebird = require('bluebird');
 var memoize = require('lodash/function/memoize');
+var promisifyAll = require('./lib/promisifyAll');
 
 function getIAM(options) {
-  return Bluebird.promisifyAll(new AWS.IAM(options));
+  return promisifyAll(new AWS.IAM(options));
 }
 
 /**

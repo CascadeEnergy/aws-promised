@@ -29,7 +29,7 @@ Basically,
 
 **Into**
 
-`s3.getObjectAsync` -- A Promises/A+ style API
+`s3.getObjectPromised` -- A Promises/A+ style API
 
 It decorates [aws-sdk](https://github.com/aws/aws-sdk-js) client instances with "Async" suffixed methods.
 Internally `aws-promised` uses
@@ -43,13 +43,13 @@ are still available for use when you need them.
 For instance, the "Async" promised methods return promises and not instances of
 [AWS.Request](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Request.html). So when you want to do something
 with AWS.Request (like open up a Node.js data stream from an s3 file) you're still able to use the original `getObject` 
-method to create the stream.
+method and `createReadStream`.
 
-```
-var s3 = require('aws-promised/getS3')();
-var params = { Bucket: 'foo', Key: 'bar.txt' };
-var fileStream = s3.getObject(param).createReadStream();
-```
+**Why "Promised" and not "Async" suffix?**
+
+Astute users of `bluebird` will notice that this module doesn't use the default suffix of `Async` for the promisified
+methods. This is because the `AWS.Lambda` client has one single method which already uses that suffix -- `.invokeAsync`. 
+`bluebird` throws an error when trying to promisify an API which contains methods with the promisified suffix.
 
 #### Usage
 
@@ -62,7 +62,7 @@ var params = {
   Key: 'foo.txt'
 };
 
-s3.getObjectAsync(params).then(console.log).catch(console.error);
+s3.getObjectPromised(params).then(console.log).catch(console.error);
 ```
 
 #### Node-style modules
@@ -73,6 +73,7 @@ In the above Usage example the `getS3` method can be required directly.
 
 ```
 var getS3 = require('aws-promised/getS3');
+var s3 = getS3({ region: 'us-west-2' });
 ```
 
 Or even...
