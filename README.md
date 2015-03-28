@@ -18,7 +18,6 @@ This is a list of the currently implemented clients:
 - [S3](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html)
 - [SQS](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SQS.html)
 
-
 #### What this module does.
 
 Basically,
@@ -31,7 +30,7 @@ Basically,
 
 `s3.getObjectPromised` -- A Promises/A+ style API
 
-It decorates [aws-sdk](https://github.com/aws/aws-sdk-js) client instances with "Async" suffixed methods.
+It decorates [aws-sdk](https://github.com/aws/aws-sdk-js) client instances with "Promised" suffixed methods.
 Internally `aws-promised` uses
 [bluebird](https://github.com/petkaantonov/bluebird) and it's
 [.promisifyAll](https://github.com/petkaantonov/bluebird/blob/master/API.md#promisepromisifyallobject-target--object-options---object)
@@ -40,7 +39,7 @@ to perform this client decoration.
 The nice thing about this approach is that it only adds new methods to the client. All of the orginal aws-sdk methods
 are still available for use when you need them.
 
-For instance, the "Async" promised methods return promises and not instances of
+For instance, the "Promised" methods return promises and not instances of
 [AWS.Request](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Request.html). So when you want to do something
 with AWS.Request (like open up a Node.js data stream from an s3 file) you're still able to use the original `getObject` 
 method and `createReadStream`.
@@ -53,17 +52,54 @@ methods. This is because the `AWS.Lambda` client has one single method which alr
 
 #### Usage
 
+Really basic, get an object from s3, then log it's contents.
+
 ```javascript
-var awsPromised = require('aws-promised');
-var s3 = awsPromised.getS3({ region: 'us-west-2' });
+'use strict';
+
+var getS3 = require('../getS3');
+var s3 = getS3();
 
 var params = {
-  Bucket: 'my-bucket-name',
+  Bucket: 'my-bucket',
   Key: 'foo.txt'
 };
 
-s3.getObjectPromised(params).then(console.log).catch(console.error);
+s3.getObjectPromised(params)
+  .then(printContents)
+  .catch(console.error);
+
+function printContents(data) {
+  console.log(data.Body.toString()); // contents of foo.txt
+}
 ```
+
+Extract a message from an SQS queue and print it's body.
+
+```javascript
+var getSQS = require('../getSQS');
+var sqs = getSQS({ region: 'us-west-2' });
+
+sqs
+  .getQueueUrlPromised({ QueueName: 'my-queue' })
+  .then(receiveMessage)
+  .then(logMessageBodies)
+  .catch(console.error);
+
+function receiveMessage(data) {
+  return sqs.receiveMessagePromised({ QueueUrl: data.QueueUrl });
+}
+
+function logMessageBodies(data) {
+  data.Messages.forEach(function(message) {
+    console.log(message.Body);
+  });
+}
+```
+
+There are examples using several different clients in the `examples/` directory of this repo. By changing names in
+them to match components deployed in your aws account, you can run them quite easily. Be sure you have SDK credentials
+setup from wherever you run them though :)
 
 #### Node-style modules
 

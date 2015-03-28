@@ -8,4 +8,10 @@ var params = {
   Key: 'foo.txt'
 };
 
-s3.getObjectAsync(params).then(console.log).catch(console.error);
+s3.getObjectPromised(params)
+  .then(printContents)
+  .catch(console.error);
+
+function printContents(data) {
+  console.log(data.Body.toString());
+}

@@ -10,10 +10,10 @@ function getEC2(options) {
 
 /**
  * Returns an instance of AWS.EC2 which has Promise methods
- * suffixed by "Async"
+ * suffixed by "Promised"
  *
  * e.g.
- * createImage => createImageAsync
+ * createImage => createImagePromised
  *
  * @param options
  */

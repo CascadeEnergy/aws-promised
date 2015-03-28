@@ -1,15 +1,16 @@
 'use strict';
 
-var sqs = require('../getSQS')({ region: 'us-west-2' });
+var getSQS = require('../getSQS');
+var sqs = getSQS({ region: 'us-west-2' });
 
 sqs
-  .getQueueUrlAsync({ QueueName: 'my-queue' })
+  .getQueueUrlPromised({ QueueName: 'my-queue' })
   .then(receiveMessage)
   .then(logMessageBodies)
   .catch(console.error);
 
 function receiveMessage(data) {
-  return sqs.receiveMessageAsync({ QueueUrl: data.QueueUrl });
+  return sqs.receiveMessagePromised({ QueueUrl: data.QueueUrl });
 }
 
 function logMessageBodies(data) {

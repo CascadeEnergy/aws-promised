@@ -10,10 +10,10 @@ function getIAM(options) {
 
 /**
  * Returns an instance of AWS.IAM which has Promise methods
- * suffixed by "Async"
+ * suffixed by "Promised"
  *
  * e.g.
- * createRole => createRoleAsync
+ * createRole => createRolePromised
  *
  * @param options
  */
