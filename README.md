@@ -6,7 +6,7 @@ Provides Promises/A+ compliant versions of all your favorite AWS SDK clients.
 
 [![NPM](https://nodei.co/npm/aws-promised.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/aws-promised/)
 
-# Disclaimer
+# DISCLAIMER :exclamation: :warning:
 
 This module is a work in progress. Not all of the AWS SDK clients are wrapped
 at this point. If you want to add one, it's really easy. Pretty please see the contribution section below
