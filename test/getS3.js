@@ -9,10 +9,10 @@ test('promisify and cache S3 client', function(t) {
   var standardS3 = { fake: 's3Instance' };
   var promisedS3 = 'promised.s3';
   var AWS = { S3: sinon.stub().returns(standardS3) };
-  var Bluebird = { promisifyAll: sinon.stub().returns(promisedS3) };
+  var promisifyAll = sinon.stub().returns(promisedS3);
   var getS3 = proxyquire('../getS3', {
     'aws-sdk': AWS,
-    bluebird: Bluebird
+    './lib/promisifyAll': promisifyAll
   });
   var result = getS3(options);
   var cachedResult = getS3(options);
@@ -21,10 +21,10 @@ test('promisify and cache S3 client', function(t) {
   t.equal(AWS.S3.args[0].length, 1);
   t.equal(AWS.S3.args[0][0], options, 'options passed to AWS.S3');
 
-  t.ok(Bluebird.promisifyAll.calledOnce, 'promisifyAll called');
-  t.equal(Bluebird.promisifyAll.args[0].length, 1);
+  t.ok(promisifyAll.calledOnce, 'promisifyAll called');
+  t.equal(promisifyAll.args[0].length, 1);
   t.equal(
-    Bluebird.promisifyAll.args[0][0],
+    promisifyAll.args[0][0],
     standardS3,
     'promisify the s3 client'
   );

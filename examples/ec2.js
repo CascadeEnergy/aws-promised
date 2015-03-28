@@ -11,7 +11,7 @@ var params = {
 };
 
 ec2
-  .createSecurityGroupAsync(params)
+  .createSecurityGroupPromised(params)
   .then(addIngressRule)
   .then(success)
   .catch(console.error);
@@ -25,7 +25,7 @@ function addIngressRule(data) {
     ToPort: 8000
   };
 
-  return ec2.authorizeSecurityGroupIngressAsync(params);
+  return ec2.authorizeSecurityGroupIngressPromised(params);
 }
 
 function success() {

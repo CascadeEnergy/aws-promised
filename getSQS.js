@@ -1,19 +1,19 @@
 'use strict';
 
 var AWS = require('aws-sdk');
-var Bluebird = require('bluebird');
 var memoize = require('lodash/function/memoize');
+var promisifyAll = require('./lib/promisifyAll');
 
 function getSQS(options) {
-  return Bluebird.promisifyAll(new AWS.SQS(options));
+  return promisifyAll(new AWS.SQS(options));
 }
 
 /**
  * Returns an instance of AWS.SQS which has Promise methods
- * suffixed by "Async"
+ * suffixed by "Promised"
  *
  * e.g.
- * receiveMessage : receiveMessageAsync
+ * receiveMessage : receiveMessagePromised
  *
  * @param options
  */

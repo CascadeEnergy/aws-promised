@@ -9,10 +9,10 @@ test('promisify and cache sqs client', function(t) {
   var standardSQS = { fake: 'sqsInstance' };
   var promisedSQS = 'promised.sqs';
   var AWS = { SQS: sinon.stub().returns(standardSQS) };
-  var Bluebird = { promisifyAll: sinon.stub().returns(promisedSQS) };
+  var promisifyAll = sinon.stub().returns(promisedSQS);
   var getSQS = proxyquire('../getSQS', {
     'aws-sdk': AWS,
-    bluebird: Bluebird
+    './lib/promisifyAll': promisifyAll
   });
   var result = getSQS(options);
   var cachedResult = getSQS(options);
@@ -21,10 +21,10 @@ test('promisify and cache sqs client', function(t) {
   t.equal(AWS.SQS.args[0].length, 1);
   t.equal(AWS.SQS.args[0][0], options, 'options passed to AWS.SQS');
 
-  t.ok(Bluebird.promisifyAll.calledOnce, 'promisifyAll called');
-  t.equal(Bluebird.promisifyAll.args[0].length, 1);
+  t.ok(promisifyAll.calledOnce, 'promisifyAll called');
+  t.equal(promisifyAll.args[0].length, 1);
   t.equal(
-    Bluebird.promisifyAll.args[0][0],
+    promisifyAll.args[0][0],
     standardSQS,
     'promisify the SQS client'
   );

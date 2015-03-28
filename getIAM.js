@@ -1,19 +1,19 @@
 'use strict';
 
 var AWS = require('aws-sdk');
-var Bluebird = require('bluebird');
 var memoize = require('lodash/function/memoize');
+var promisifyAll = require('./lib/promisifyAll');
 
 function getIAM(options) {
-  return Bluebird.promisifyAll(new AWS.IAM(options));
+  return promisifyAll(new AWS.IAM(options));
 }
 
 /**
  * Returns an instance of AWS.IAM which has Promise methods
- * suffixed by "Async"
+ * suffixed by "Promised"
  *
  * e.g.
- * createRole => createRoleAsync
+ * createRole => createRolePromised
  *
  * @param options
  */
