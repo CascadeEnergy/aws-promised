@@ -8,12 +8,21 @@
  * not already exist it is created, otherwise the existing one is returned.
  *
  * @type {{
+ *  getAutoScaling: (*|exports|module.exports),
  *  getEC2: (*|exports|module.exports),
  *  getIAM: (*|exports|module.exports),
  *  getS3: (*|exports|module.exports)
+ *  getSQS: (*|exports|module.exports)
  * }}
  */
 module.exports = {
+  /**
+   * Returns a Promises compliant AWS.AutoScaling api.
+   *
+   * @param {object} options The AWS.AutoScaling constructor options.
+   */
+  getAutoScaling: require('./getAutoScaling'),
+
   /**
    * Returns a Promises compliant AWS.EC2 api.
    *
