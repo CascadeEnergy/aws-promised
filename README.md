@@ -13,6 +13,7 @@ at this point. If you want to add one, it's really easy. Pretty please see the c
 
 This is a list of the currently implemented clients:
 
+- [AutoScaling](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/AutoScaling.html)
 - [EC2](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/EC2.html)
 - [IAM](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/IAM.html)
 - [S3](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html)
@@ -98,8 +99,9 @@ function logMessageBodies(data) {
 ```
 
 There are examples using several different clients in the `examples/` directory of this repo. By changing names in
-them to match components deployed in your aws account, you can run them quite easily. Be sure you have SDK credentials
-setup from wherever you run them though :)
+them to match components deployed in your aws account, you can run them quite easily. You will need
+[SDK credentials](http://docs.aws.amazon.com/AWSJavaScriptSDK/guide/node-configuring.html#Setting_AWS_Credentials) and
+if you do launch services from those scripts you **will** incur the cost.
 
 #### Node-style modules
 
