@@ -11,11 +11,13 @@
     "url": "https://github.com/CascadeEnergy/aws-promised.git"
   },
   "keywords": [
+    "A+",
+    "aws",
     "aws-sdk",
     "bluebird",
-    "aws",
+    "Promise",
     "promises",
-    "A+"
+    "then"
   ],
   "author": "Will Vaughn <willieviseoae@gmail.com>",
   "license": "MIT",
