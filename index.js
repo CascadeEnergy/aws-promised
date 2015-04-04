@@ -32,6 +32,13 @@ module.exports = {
   cloudWatch: require('./cloudWatch'),
 
   /**
+   * Returns a Promises compliant AWS.DynamoDB api.
+   *
+   * @param {object} options The AWS.DynamoDB constructor options.
+   */
+  dynamoDb: require('./dynamoDb'),
+
+  /**
    * Returns a Promises compliant AWS.EC2 api.
    *
    * @param {object} options The AWS.EC2 constructor options.
