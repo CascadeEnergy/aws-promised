@@ -24,6 +24,13 @@ module.exports = {
   getAutoScaling: require('./getAutoScaling'),
 
   /**
+   * Returns a Promises compliant AWS.CloudWatch api.
+   *
+   * @param {object} options The AWS.CloudWatch constructor options.
+   */
+  getCloudWatch: require('./getCloudWatch'),
+
+  /**
    * Returns a Promises compliant AWS.EC2 api.
    *
    * @param {object} options The AWS.EC2 constructor options.

@@ -8,6 +8,11 @@ test('getAutoScaling is function', function(t) {
   t.equal(typeof clientFactory.getAutoScaling, 'function');
 });
 
+test('getCloudWatch is function', function(t) {
+  t.plan(1);
+  t.equal(typeof clientFactory.getCloudWatch, 'function');
+});
+
 test('getEC2 is function', function(t) {
   t.plan(1);
   t.equal(typeof clientFactory.getEC2, 'function');
