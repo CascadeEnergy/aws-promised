@@ -22,40 +22,40 @@ module.exports = {
    *
    * @param {object} options The AWS.AutoScaling constructor options.
    */
-  getAutoScaling: require('./autoScaling'),
+  autoScaling: require('./autoScaling'),
 
   /**
    * Returns a Promises compliant AWS.CloudWatch api.
    *
    * @param {object} options The AWS.CloudWatch constructor options.
    */
-  getCloudWatch: require('./cloudWatch'),
+  cloudWatch: require('./cloudWatch'),
 
   /**
    * Returns a Promises compliant AWS.EC2 api.
    *
    * @param {object} options The AWS.EC2 constructor options.
    */
-  getEC2: require('./ec2'),
+  ec2: require('./ec2'),
 
   /**
    * Returns a Promises compliant AWS.IAM api.
    *
    * @param {object} options The AWS.IAM constructor options.
    */
-  getIAM: require('./iam'),
+  iam: require('./iam'),
 
   /**
    * Returns a Promises compliant AWS.S3 api.
    *
    * @param {object} options The AWS.S3 constructor options.
    */
-  getS3: require('./s3'),
+  s3: require('./s3'),
 
   /**
    * Returns a Promises compliant AWS.SQS api.
    *
    * @param {object} options The AWS.SQS constructor options.
    */
-  getSQS: require('./sqs')
+  sqs: require('./sqs')
 };

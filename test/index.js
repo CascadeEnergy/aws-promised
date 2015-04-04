@@ -1,34 +1,34 @@
 'use strict';
 
 var test = require('tape');
-var clientFactory = require('../../aws-promised');
+var clientFactory = require('../index');
 
 test('autoScaling is function', function(t) {
   t.plan(1);
-  t.equal(typeof clientFactory.getAutoScaling, 'function');
+  t.equal(typeof clientFactory.autoScaling, 'function');
 });
 
 test('cloudWatch is function', function(t) {
   t.plan(1);
-  t.equal(typeof clientFactory.getCloudWatch, 'function');
+  t.equal(typeof clientFactory.cloudWatch, 'function');
 });
 
 test('ec2 is function', function(t) {
   t.plan(1);
-  t.equal(typeof clientFactory.getEC2, 'function');
+  t.equal(typeof clientFactory.ec2, 'function');
 });
 
 test('iam is function', function(t) {
   t.plan(1);
-  t.equal(typeof clientFactory.getIAM, 'function');
+  t.equal(typeof clientFactory.iam, 'function');
 });
 
 test('s3 is function', function(t) {
   t.plan(1);
-  t.equal(typeof clientFactory.getS3, 'function');
+  t.equal(typeof clientFactory.s3, 'function');
 });
 
 test('sqs is function', function(t) {
   t.plan(1);
-  t.equal(typeof clientFactory.getSQS, 'function');
+  t.equal(typeof clientFactory.sqs, 'function');
 });
