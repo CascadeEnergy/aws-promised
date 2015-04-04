@@ -4,7 +4,7 @@ var test = require('tape');
 
 test('calls promisifyAll on a target, with suffix option', function(t) {
   var target = { myFunc: function() {} };
-  var promisifyAll = require('../../lib/promisifyAll');
+  var promisifyAll = require('../../../lib/util/promisifyAll');
   var result = promisifyAll(target);
 
   t.ok(typeof result.myFunc === 'function', 'myFunc still present');

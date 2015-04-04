@@ -10,12 +10,12 @@ test('promisify and cache AutoScaling client', function(t) {
   var promisedAutoScaling = 'promised.autoScaling';
   var AWS = { AutoScaling: sinon.stub().returns(standardAutoScaling) };
   var promisifyAll = sinon.stub().returns(promisedAutoScaling);
-  var getAutoScaling = proxyquire('../getAutoScaling', {
+  var autoScalingPromised = proxyquire('../autoScaling', {
     'aws-sdk': AWS,
-    './lib/promisifyAll': promisifyAll
+    './lib/util/promisifyAll': promisifyAll
   });
-  var result = getAutoScaling(options);
-  var cachedResult = getAutoScaling(options);
+  var result = autoScalingPromised(options);
+  var cachedResult = autoScalingPromised(options);
 
   t.ok(AWS.AutoScaling.calledOnce, 'autoScaling client made');
   t.equal(AWS.AutoScaling.args[0].length, 1);

@@ -1,7 +1,7 @@
 'use strict';
 
-var getEC2 = require('../getEC2');
-var ec2 = getEC2({region: 'us-west-2'});
+var awsPromised = require('../index');
+var ec2 = awsPromised.ec2({region: 'us-west-2'});
 
 var groupName = 'global-www';
 

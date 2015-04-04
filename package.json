@@ -2,9 +2,9 @@
   "name": "aws-promised",
   "version": "1.2.0",
   "description": "Provides Promises/A+ compliant version of all your favorite AWS SDK clients.",
-  "main": "index.js",
+  "main": "lib/aws-promised.js",
   "scripts": {
-    "test": "node_modules/.bin/tape test/*.js test/**/*.js"
+    "test": "node_modules/.bin/tape test/*.js test/**/**/*.js"
   },
   "repository": {
     "type": "git",

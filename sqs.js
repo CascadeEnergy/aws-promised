@@ -2,9 +2,9 @@
 
 var AWS = require('aws-sdk');
 var memoize = require('lodash/function/memoize');
-var promisifyAll = require('./lib/promisifyAll');
+var promisifyAll = require('./lib/util/promisifyAll');
 
-function getSQS(options) {
+function sqs(options) {
   return promisifyAll(new AWS.SQS(options));
 }
 
@@ -17,4 +17,4 @@ function getSQS(options) {
  *
  * @param options
  */
-module.exports = memoize(getSQS);
+module.exports = memoize(sqs);

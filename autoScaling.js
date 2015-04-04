@@ -2,9 +2,9 @@
 
 var AWS = require('aws-sdk');
 var memoize = require('lodash/function/memoize');
-var promisifyAll = require('./lib/promisifyAll');
+var promisifyAll = require('./lib/util/promisifyAll');
 
-function getAutoScaling(options) {
+function autoScaling(options) {
   return promisifyAll(new AWS.AutoScaling(options));
 }
 
@@ -17,4 +17,4 @@ function getAutoScaling(options) {
  *
  * @param options
  */
-module.exports = memoize(getAutoScaling);
+module.exports = memoize(autoScaling);

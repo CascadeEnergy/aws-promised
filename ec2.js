@@ -2,9 +2,9 @@
 
 var AWS = require('aws-sdk');
 var memoize = require('lodash/function/memoize');
-var promisifyAll = require('./lib/promisifyAll');
+var promisifyAll = require('./lib/util/promisifyAll');
 
-function getEC2(options) {
+function ec2(options) {
   return promisifyAll(new AWS.EC2(options));
 }
 
@@ -17,4 +17,4 @@ function getEC2(options) {
  *
  * @param options
  */
-module.exports = memoize(getEC2);
+module.exports = memoize(ec2);

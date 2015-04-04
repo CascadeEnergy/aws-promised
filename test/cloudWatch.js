@@ -10,12 +10,12 @@ test('promisify and cache CloudWatch client', function(t) {
   var promisedCloudWatch = 'promised.cloudWatch';
   var AWS = { CloudWatch: sinon.stub().returns(standardCloudWatch) };
   var promisifyAll = sinon.stub().returns(promisedCloudWatch);
-  var getCloudWatch = proxyquire('../getCloudWatch', {
+  var cloudWatchPromised = proxyquire('../cloudWatch', {
     'aws-sdk': AWS,
-    './lib/promisifyAll': promisifyAll
+    './lib/util/promisifyAll': promisifyAll
   });
-  var result = getCloudWatch(options);
-  var cachedResult = getCloudWatch(options);
+  var result = cloudWatchPromised(options);
+  var cachedResult = cloudWatchPromised(options);
 
   t.ok(AWS.CloudWatch.calledOnce, 'cloudWatch client made');
   t.equal(AWS.CloudWatch.args[0].length, 1);

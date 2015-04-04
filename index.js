@@ -8,11 +8,12 @@
  * not already exist it is created, otherwise the existing one is returned.
  *
  * @type {{
- *  getAutoScaling: (*|exports|module.exports),
- *  getEC2: (*|exports|module.exports),
- *  getIAM: (*|exports|module.exports),
- *  getS3: (*|exports|module.exports)
- *  getSQS: (*|exports|module.exports)
+ *  autoScaling: (*|exports|module.exports),
+ *  cloudWatch: (*|exports|module.exports),
+ *  ec2: (*|exports|module.exports),
+ *  iam: (*|exports|module.exports),
+ *  s3: (*|exports|module.exports)
+ *  sqs: (*|exports|module.exports)
  * }}
  */
 module.exports = {
@@ -21,40 +22,40 @@ module.exports = {
    *
    * @param {object} options The AWS.AutoScaling constructor options.
    */
-  getAutoScaling: require('./getAutoScaling'),
+  getAutoScaling: require('./autoScaling'),
 
   /**
    * Returns a Promises compliant AWS.CloudWatch api.
    *
    * @param {object} options The AWS.CloudWatch constructor options.
    */
-  getCloudWatch: require('./getCloudWatch'),
+  getCloudWatch: require('./cloudWatch'),
 
   /**
    * Returns a Promises compliant AWS.EC2 api.
    *
    * @param {object} options The AWS.EC2 constructor options.
    */
-  getEC2: require('./getEC2'),
+  getEC2: require('./ec2'),
 
   /**
    * Returns a Promises compliant AWS.IAM api.
    *
    * @param {object} options The AWS.IAM constructor options.
    */
-  getIAM: require('./getIAM'),
+  getIAM: require('./iam'),
 
   /**
    * Returns a Promises compliant AWS.S3 api.
    *
    * @param {object} options The AWS.S3 constructor options.
    */
-  getS3: require('./getS3'),
+  getS3: require('./s3'),
 
   /**
    * Returns a Promises compliant AWS.SQS api.
    *
    * @param {object} options The AWS.SQS constructor options.
    */
-  getSQS: require('./getSQS')
+  getSQS: require('./sqs')
 };

@@ -59,8 +59,8 @@ Really basic, get an object from s3, then log it's contents.
 ```javascript
 'use strict';
 
-var getS3 = require('../getS3');
-var s3 = getS3();
+var awsPromised = require('aws-promised');
+var s3 = awsPromised.s3();
 
 var params = {
   Bucket: 'my-bucket',
@@ -79,8 +79,8 @@ function printContents(data) {
 Extract a message from an SQS queue and print it's body.
 
 ```javascript
-var getSQS = require('../getSQS');
-var sqs = getSQS({ region: 'us-west-2' });
+var awsPromised = require('aws-promised');
+var sqs = awsPromised.sqs({ region: 'us-west-2' });
 
 sqs
   .getQueueUrlPromised({ QueueName: 'my-queue' })
@@ -108,17 +108,17 @@ if you do launch services from those scripts you **will** incur the cost.
 
 Any client factory method is available as a stand-alone require-able module.
 
-In the above Usage example the `getS3` method can be required directly.
+In the above Usage example the `s3` promised client factory can be required directly.
 
 ```
-var getS3 = require('aws-promised/getS3');
-var s3 = getS3({ region: 'us-west-2' });
+var s3Promised = require('aws-promised/s3');
+var s3 = s3Promised({ region: 'us-west-2' });
 ```
 
-Or even...
+Or event make an s3 client with a one-liner:
 
 ```
-var s3 = require('aws-promised/getS3')({ region: 'us-west-2' });
+var s3 = require('aws-promised/s3')({ region: 'us-west-2' });
 ```
 
 #### install

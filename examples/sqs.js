@@ -1,7 +1,7 @@
 'use strict';
 
-var getSQS = require('../getSQS');
-var sqs = getSQS({ region: 'us-west-2' });
+var sqsPromised = require('../sqs');
+var sqs = sqsPromised({ region: 'us-west-2' });
 
 sqs
   .getQueueUrlPromised({ QueueName: 'my-queue' })

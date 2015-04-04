@@ -2,9 +2,9 @@
 
 var AWS = require('aws-sdk');
 var memoize = require('lodash/function/memoize');
-var promisifyAll = require('./lib/promisifyAll');
+var promisifyAll = require('./lib/util/promisifyAll');
 
-function getCloudWatch(options) {
+function cloudWatch(options) {
   return promisifyAll(new AWS.CloudWatch(options));
 }
 
@@ -17,4 +17,4 @@ function getCloudWatch(options) {
  *
  * @param options
  */
-module.exports = memoize(getCloudWatch);
+module.exports = memoize(cloudWatch);

@@ -1,7 +1,7 @@
 'use strict';
 
-var getCloudWatch = require('../getCloudWatch');
-var cloudWatch = getCloudWatch({ region: 'us-west-2' });
+var cloudWatchPromised = require('../cloudWatch');
+var cloudWatch = cloudWatchPromised({ region: 'us-west-2' });
 
 createCpuHighAlarm()
   .then(console.log)

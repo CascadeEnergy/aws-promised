@@ -10,12 +10,12 @@ test('promisify and cache S3 client', function(t) {
   var promisedS3 = 'promised.s3';
   var AWS = { S3: sinon.stub().returns(standardS3) };
   var promisifyAll = sinon.stub().returns(promisedS3);
-  var getS3 = proxyquire('../getS3', {
+  var s3Promised = proxyquire('../s3', {
     'aws-sdk': AWS,
-    './lib/promisifyAll': promisifyAll
+    './lib/util/promisifyAll': promisifyAll
   });
-  var result = getS3(options);
-  var cachedResult = getS3(options);
+  var result = s3Promised(options);
+  var cachedResult = s3Promised(options);
 
   t.ok(AWS.S3.calledOnce, 's3 client made');
   t.equal(AWS.S3.args[0].length, 1);

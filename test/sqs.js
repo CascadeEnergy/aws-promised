@@ -10,12 +10,12 @@ test('promisify and cache sqs client', function(t) {
   var promisedSQS = 'promised.sqs';
   var AWS = { SQS: sinon.stub().returns(standardSQS) };
   var promisifyAll = sinon.stub().returns(promisedSQS);
-  var getSQS = proxyquire('../getSQS', {
+  var sqsPromised = proxyquire('../sqs', {
     'aws-sdk': AWS,
-    './lib/promisifyAll': promisifyAll
+    './lib/util/promisifyAll': promisifyAll
   });
-  var result = getSQS(options);
-  var cachedResult = getSQS(options);
+  var result = sqsPromised(options);
+  var cachedResult = sqsPromised(options);
 
   t.ok(AWS.SQS.calledOnce, 'makes sqs client');
   t.equal(AWS.SQS.args[0].length, 1);

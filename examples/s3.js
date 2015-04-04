@@ -1,7 +1,7 @@
 'use strict';
 
-var getS3 = require('../getS3');
-var s3 = getS3();
+var awsPromised = require('../index');
+var s3 = awsPromised.s3();
 
 var params = {
   Bucket: 'my-bucket-name',

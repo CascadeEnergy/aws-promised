@@ -1,7 +1,7 @@
 'use strict';
 
-var getAutoScaling = require('../getAutoScaling');
-var autoScaling = getAutoScaling({ region: 'YOUR_REGION' });
+var autoScalingPromised = require('../autoScaling');
+var autoScaling = autoScalingPromised({ region: 'YOUR_REGION' });
 
 createLaunchConfiguration()
   .then(createAutoScalingGroup)

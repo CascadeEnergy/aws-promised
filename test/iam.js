@@ -10,12 +10,12 @@ test('promisify and cache IAM client', function(t) {
   var promisedIam = 'promised.iam';
   var AWS = { IAM: sinon.stub().returns(standardIam) };
   var promisifyAll = sinon.stub().returns(promisedIam);
-  var getIAM = proxyquire('../getIAM', {
+  var iamPromised = proxyquire('../iam', {
     'aws-sdk': AWS,
-    './lib/promisifyAll': promisifyAll
+    './lib/util/promisifyAll': promisifyAll
   });
-  var result = getIAM(options);
-  var cachedResult = getIAM(options);
+  var result = iamPromised(options);
+  var cachedResult = iamPromised(options);
 
   t.ok(AWS.IAM.calledOnce, 'iam client made');
   t.equal(AWS.IAM.args[0].length, 1);

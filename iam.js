@@ -2,9 +2,9 @@
 
 var AWS = require('aws-sdk');
 var memoize = require('lodash/function/memoize');
-var promisifyAll = require('./lib/promisifyAll');
+var promisifyAll = require('./lib/util/promisifyAll');
 
-function getIAM(options) {
+function iam(options) {
   return promisifyAll(new AWS.IAM(options));
 }
 
@@ -17,4 +17,4 @@ function getIAM(options) {
  *
  * @param options
  */
-module.exports = memoize(getIAM);
+module.exports = memoize(iam);
