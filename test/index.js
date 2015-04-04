@@ -23,6 +23,11 @@ test('iam is function', function(t) {
   t.equal(typeof clientFactory.iam, 'function');
 });
 
+test('metadataService is function', function(t) {
+  t.plan(1);
+  t.equal(typeof clientFactory.metadataService, 'function');
+});
+
 test('s3 is function', function(t) {
   t.plan(1);
   t.equal(typeof clientFactory.s3, 'function');

@@ -46,6 +46,13 @@ module.exports = {
   iam: require('./iam'),
 
   /**
+   * Returns a Promises compliant AWS.MetadataService api.
+   *
+   * @param {object} options The AWS.MetadataService constructor options.
+   */
+  metadataService: require('./metadataService'),
+
+  /**
    * Returns a Promises compliant AWS.S3 api.
    *
    * @param {object} options The AWS.S3 constructor options.
