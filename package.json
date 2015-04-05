@@ -20,6 +20,15 @@
     "then"
   ],
   "author": "Will Vaughn <willieviseoae@gmail.com>",
+  "contributors": [
+    {
+      "name": "Jinsy A. Oommen",
+      "email": "jinsy.oommen@cascadeenergy.com"
+    },
+    {
+      "name": "Simon R"
+    }
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/CascadeEnergy/aws-promised/issues"
