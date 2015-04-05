@@ -15,8 +15,10 @@ This is a list of the currently implemented clients:
 
 - [AutoScaling](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/AutoScaling.html)
 - [CloudWatch](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/CloudWatch.html)
+- [DynamoDB](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/DynamoDB.html)
 - [EC2](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/EC2.html)
 - [IAM](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/IAM.html)
+- [MetadataService](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/MetadataService.html)
 - [S3](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html)
 - [SQS](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SQS.html)
 

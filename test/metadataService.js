@@ -4,7 +4,7 @@ var proxyquire = require('proxyquire');
 var sinon = require('sinon');
 var test = require('tape');
 
-test('promisify and cache metadataService client', function(t) {
+test('promisify and cache MetadataService client', function(t) {
   var options = 'foo';
   var standardMetadataService = { fake: 'metadataServiceInstance' };
   var promisedMetadataService = 'promised.MetadataService';

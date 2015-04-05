@@ -4,7 +4,7 @@ var proxyquire = require('proxyquire');
 var sinon = require('sinon');
 var test = require('tape');
 
-test('promisify and cache DynamoDb client', function(t) {
+test('promisify and cache DynamoDB client', function(t) {
   var options = 'foo';
   var standardDynamoDb = { fake: 'dynamoDbInstance' };
   var promisedDynamoDb = 'promised.dynamoDb';
@@ -17,7 +17,7 @@ test('promisify and cache DynamoDb client', function(t) {
   var result = dynamoDbPromised(options);
   var cachedResult = dynamoDbPromised(options);
 
-  t.ok(AWS.DynamoDB.calledOnce, 'dynamoDb client made');
+  t.ok(AWS.DynamoDB.calledOnce, 'DynamoDB client made');
   t.equal(AWS.DynamoDB.args[0].length, 1);
   t.equal(AWS.DynamoDB.args[0][0], options, 'options passed to AWS.DynamoDB');
 

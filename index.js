@@ -10,8 +10,10 @@
  * @type {{
  *  autoScaling: (*|exports|module.exports),
  *  cloudWatch: (*|exports|module.exports),
+ *  dynamoDb: (*|exports|module.exports),
  *  ec2: (*|exports|module.exports),
  *  iam: (*|exports|module.exports),
+ *  metadataService: (*|exports|module.exports)
  *  s3: (*|exports|module.exports)
  *  sqs: (*|exports|module.exports)
  * }}
