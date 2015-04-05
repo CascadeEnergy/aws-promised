@@ -13,6 +13,11 @@ test('cloudWatch is function', function(t) {
   t.equal(typeof clientFactory.cloudWatch, 'function');
 });
 
+test('dynamoDb is function', function(t) {
+  t.plan(1);
+  t.equal(typeof clientFactory.dynamoDb, 'function');
+});
+
 test('ec2 is function', function(t) {
   t.plan(1);
   t.equal(typeof clientFactory.ec2, 'function');
