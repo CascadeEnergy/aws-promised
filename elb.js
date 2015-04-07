@@ -13,7 +13,7 @@ function elb(options) {
  * suffixed by "Promised"
  *
  * e.g.
- * createImage => createImagePromised
+ * createLoadBalancer => createLoadBalancerPromised
  *
  * @param options
  */
