@@ -23,6 +23,11 @@ test('ec2 is function', function(t) {
   t.equal(typeof clientFactory.ec2, 'function');
 });
 
+test('elb is function', function(t) {
+  t.plan(1);
+  t.equal(typeof clientFactory.elb, 'function');
+});
+
 test('iam is function', function(t) {
   t.plan(1);
   t.equal(typeof clientFactory.iam, 'function');
