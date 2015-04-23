@@ -49,6 +49,13 @@ module.exports = {
   ec2: require('./ec2'),
 
   /**
+   * Returns a Promises compliant AWS.ECS api.
+   *
+   * @param {object} options The AWS.ECS constructor options.
+   */
+  ecs: require('./ecs'),
+
+  /**
    * Returns a Promises compliant AWS.ELB api.
    *
    * @param {object} options The AWS.ELB constructor options.
