@@ -12,6 +12,7 @@
  *  cloudWatch: (*|exports|module.exports),
  *  dynamoDb: (*|exports|module.exports),
  *  ec2: (*|exports|module.exports),
+ *  ecs: (*|exports|module.exports),
  *  elb: (*|exports|module.exports),
  *  iam: (*|exports|module.exports),
  *  metadataService: (*|exports|module.exports)
@@ -47,6 +48,13 @@ module.exports = {
    * @param {object} options The AWS.EC2 constructor options.
    */
   ec2: require('./ec2'),
+
+  /**
+   * Returns a Promises compliant AWS.ECS api.
+   *
+   * @param {object} options The AWS.ECS constructor options.
+   */
+  ecs: require('./ecs'),
 
   /**
    * Returns a Promises compliant AWS.ELB api.
