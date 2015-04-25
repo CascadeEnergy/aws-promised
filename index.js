@@ -12,6 +12,7 @@
  *  cloudWatch: (*|exports|module.exports),
  *  dynamoDb: (*|exports|module.exports),
  *  ec2: (*|exports|module.exports),
+ *  ecs: (*|exports|module.exports),
  *  elb: (*|exports|module.exports),
  *  iam: (*|exports|module.exports),
  *  metadataService: (*|exports|module.exports)
