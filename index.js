@@ -71,6 +71,13 @@ module.exports = {
   iam: require('./iam'),
 
   /**
+   * Returns a Promises compliant AWS.Kinesis api.
+   *
+   * @param {object} options The AWS.Kinesis constructor options.
+   */
+  kinesis: require('./kinesis'),
+
+  /**
    * Returns a Promises compliant AWS.MetadataService api.
    *
    * @param {object} options The AWS.MetadataService constructor options.
