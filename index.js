@@ -57,6 +57,13 @@ module.exports = {
   ecs: require('./ecs'),
 
   /**
+   * Returns a Promise compliant AWS.ElastiCache api
+   *
+   * @param {object} options The AWS.ElastiCache constructor options.
+   */
+  elastiCache: require('./elastiCache'),
+
+  /**
    * Returns a Promises compliant AWS.ELB api.
    *
    * @param {object} options The AWS.ELB constructor options.
