@@ -28,6 +28,11 @@ test('ecs is function', function(t) {
   t.equal(typeof clientFactory.ecs, 'function');
 });
 
+test('elastiCache is function', function(t) {
+  t.plan(1);
+  t.equal(typeof clientFactory.elastiCache, 'function');
+});
+
 test('elb is function', function(t) {
   t.plan(1);
   t.equal(typeof clientFactory.elb, 'function');
