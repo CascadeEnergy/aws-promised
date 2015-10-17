@@ -1,6 +1,4 @@
-[![Build Status](https://travis-ci.org/CascadeEnergy/aws-promised.svg)](https://travis-ci.org/CascadeEnergy/aws-promised)
-
-# aws-promised
+# aws-promised [![Build Status](https://travis-ci.org/CascadeEnergy/aws-promised.svg)](https://travis-ci.org/CascadeEnergy/aws-promised)
 
 Provides Promises/A+ compliant versions of all your favorite AWS SDK clients.
 
