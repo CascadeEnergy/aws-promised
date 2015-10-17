@@ -57,6 +57,13 @@ module.exports = {
   ecs: require('./ecs'),
 
   /**
+   * Returns a Promise compliant AWS.ElastiCache api
+   *
+   * @param {object} options The AWS.ElastiCache constructor options.
+   */
+  elastiCache: require('./elastiCache'),
+
+  /**
    * Returns a Promises compliant AWS.ELB api.
    *
    * @param {object} options The AWS.ELB constructor options.
@@ -69,6 +76,13 @@ module.exports = {
    * @param {object} options The AWS.IAM constructor options.
    */
   iam: require('./iam'),
+
+  /**
+   * Returns a Promises compliant AWS.Kinesis api.
+   *
+   * @param {object} options The AWS.Kinesis constructor options.
+   */
+  kinesis: require('./kinesis'),
 
   /**
    * Returns a Promises compliant AWS.MetadataService api.

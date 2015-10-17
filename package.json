@@ -1,6 +1,6 @@
 {
   "name": "aws-promised",
-  "version": "2.3.0",
+  "version": "2.5.0",
   "description": "Provides Promises/A+ compliant version of all your favorite AWS SDK clients.",
   "main": "lib/aws-promised.js",
   "scripts": {
@@ -24,6 +24,10 @@
     {
       "name": "Jinsy A. Oommen",
       "email": "jinsy.oommen@cascadeenergy.com"
+    },
+    {
+      "name": "Charles Berube",
+      "email": "charles.berube@cascadeenergy.com"
     },
     {
       "name": "Simon R"

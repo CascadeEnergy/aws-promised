@@ -1,11 +1,13 @@
 'use strict';
 
 var assert = require('assert');
-var describe = require('mocha').describe;
-var it = require('mocha').it;
+var mocha = require('mocha');
 var proxyquire = require('proxyquire');
 var sinon = require('sinon');
 var withData = require('leche').withData;
+
+var describe = mocha.describe;
+var it = mocha.it;
 
 withData([
   ['autoScaling', 'AutoScaling'],
@@ -13,8 +15,10 @@ withData([
   ['dynamoDb', 'DynamoDB'],
   ['ec2', 'EC2'],
   ['ecs', 'ECS'],
+  ['elastiCache', 'ElastiCache'],
   ['elb', 'ELB'],
   ['iam', 'IAM'],
+  ['kinesis', 'Kinesis'],
   ['metadataService', 'MetadataService'],
   ['s3', 'S3'],
   ['sqs', 'SQS']
