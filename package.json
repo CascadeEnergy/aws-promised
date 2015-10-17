@@ -4,7 +4,7 @@
   "description": "Provides Promises/A+ compliant version of all your favorite AWS SDK clients.",
   "main": "lib/aws-promised.js",
   "scripts": {
-    "test": "node_modules/.bin/tape test/*.js test/**/**/*.js"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -35,13 +35,14 @@
   },
   "homepage": "https://github.com/CascadeEnergy/aws-promised",
   "dependencies": {
-    "aws-sdk": "^2.1.19",
-    "bluebird": "^2.9.14",
-    "lodash": "^3.5.0"
+    "aws-sdk": "^2.2.10",
+    "bluebird": "^2.10.2",
+    "lodash": "^3.10.1"
   },
   "devDependencies": {
-    "proxyquire": "^1.4.0",
-    "sinon": "^1.14.1",
-    "tape": "^3.5.0"
+    "leche": "^2.1.1",
+    "mocha": "^2.3.3",
+    "proxyquire": "^1.7.3",
+    "sinon": "^1.17.1"
   }
 }
