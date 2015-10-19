@@ -26,21 +26,27 @@ withData([
   describe(moduleName, function() {
     it('promisify and cache ' + moduleName + ' client', function() {
       // jshint maxstatements:false
-      var options = 'foo';
+      var options = {foo: 'bar'};
       var sdkInstance = {fake: 'sdk.instance'};
-      var promisedInstance = 'promised.instance';
       var AWS = {};
       AWS[constructorName] = sinon.stub().returns(sdkInstance);
 
-      var promisifyAll = sinon.stub().returns(promisedInstance);
+      var promisifyAll = sinon.stub();
 
-      var subjectUnderTest = proxyquire('../' + moduleName, {
+      var subjectUnderTest;
+      var result;
+      var cachedResult;
+
+      promisifyAll.onFirstCall().returns('promisedInstanceA');
+      promisifyAll.onSecondCall().returns('promisedInstanceB');
+
+      subjectUnderTest = proxyquire('../' + moduleName, {
         'aws-sdk': AWS,
         './lib/util/promisifyAll': promisifyAll
       });
 
-      var result = subjectUnderTest(options);
-      var cachedResult = subjectUnderTest(options);
+      result = subjectUnderTest(options);
+      cachedResult = subjectUnderTest(options);
 
       assert.ok(
         AWS[constructorName].calledOnce,
@@ -66,17 +72,10 @@ withData([
         'promisify the client'
       );
 
-      assert.equal(
-        result,
-        promisedInstance,
-        'returns promised client'
-      );
+      assert.equal(result, 'promisedInstanceA');
+      assert.equal(cachedResult, result);
 
-      assert.equal(
-        cachedResult,
-        result,
-        'promised client is memoized.'
-      );
+      assert.notEqual(cachedResult, subjectUnderTest({baz: 'qux'}));
     });
   });
 });
