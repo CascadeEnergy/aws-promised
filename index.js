@@ -106,16 +106,16 @@ module.exports = {
   s3: require('./s3'),
 
   /**
-   * Returns a Promises compliant AWS.SQS api.
-   *
-   * @param {object} options The AWS.SQS constructor options.
-   */
-  sqs: require('./sqs'),
-
-  /**
    * Returns a Promises compliant AWS.SNS api.
    *
    * @param {object} options The AWS.SNS constructor options.
    */
-  sns: require('./sns')
+  sns: require('./sns'),
+
+  /**
+   * Returns a Promises compliant AWS.SQS api.
+   *
+   * @param {object} options The AWS.SQS constructor options.
+   */
+  sqs: require('./sqs')
 };
