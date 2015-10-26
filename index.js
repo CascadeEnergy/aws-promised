@@ -85,6 +85,13 @@ module.exports = {
   kinesis: require('./kinesis'),
 
   /**
+   * Returns a Promises compliant AWS.Lambda api.
+   *
+   * @param {object} options The AWS.Lambda constructor options.
+   */
+  lambda: require('./lambda'),
+
+  /**
    * Returns a Promises compliant AWS.MetadataService api.
    *
    * @param {object} options The AWS.MetadataService constructor options.
@@ -97,6 +104,13 @@ module.exports = {
    * @param {object} options The AWS.S3 constructor options.
    */
   s3: require('./s3'),
+
+  /**
+   * Returns a Promises compliant AWS.SNS api.
+   *
+   * @param {object} options The AWS.SNS constructor options.
+   */
+  sns: require('./sns'),
 
   /**
    * Returns a Promises compliant AWS.SQS api.
