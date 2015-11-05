@@ -11,6 +11,7 @@ at this point. If you want to add one, it's really easy. Pretty please see the c
 
 This is a list of the currently implemented clients:
 
+- [APIGateway](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/APIGateway.html)
 - [AutoScaling](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/AutoScaling.html)
 - [CloudFormation](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/CloudFormation.html)
 - [CloudWatch](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/CloudWatch.html)

@@ -10,6 +10,7 @@ var describe = mocha.describe;
 var it = mocha.it;
 
 withData([
+  ['apiGateway', 'APIGateway'],
   ['autoScaling', 'AutoScaling'],
   ['cloudWatch', 'CloudWatch'],
   ['dynamoDb', 'DynamoDB'],

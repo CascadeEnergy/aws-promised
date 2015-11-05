@@ -8,6 +8,7 @@
  * not already exist it is created, otherwise the existing one is returned.
  *
  * @type {{
+ *  apiGateway: (*|exports|module.exports),
  *  autoScaling: (*|exports|module.exports),
  *  cloudWatch: (*|exports|module.exports),
  *  dynamoDb: (*|exports|module.exports),
@@ -21,6 +22,13 @@
  * }}
  */
 module.exports = {
+  /**
+   * Returns a Promises compliant AWS.APIGateway api.
+   *
+   * @param {object} options The AWS.APIGateway constructor options.
+   */
+  apiGateway: require('./apiGateway'),
+
   /**
    * Returns a Promises compliant AWS.AutoScaling api.
    *
