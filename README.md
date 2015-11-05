@@ -138,5 +138,4 @@ npm install --save aws-promised
 
 I'm adding AWS clients to this module as I need them, and therefore the one you may need might be missing.
 They're all pretty much the same. You can look at the source for any client, and it's associated test and can likely
-copy-paste and change a few names and get it to work. Please submit PR's for proposed additions, write tests, and try to
-follow the [Cascade Energy Style Guide for NodeJs](https://github.com/CascadeEnergy/node-style-guide).
+copy-paste and change a few names and get it to work. Please submit PR's for proposed additions and write tests.
