@@ -19,9 +19,11 @@ withData([
   ['elb', 'ELB'],
   ['iam', 'IAM'],
   ['kinesis', 'Kinesis'],
+  ['lambda', 'Lambda'],
   ['metadataService', 'MetadataService'],
   ['s3', 'S3'],
   ['ses', 'SES'],
+  ['sns', 'SNS'],
   ['sqs', 'SQS']
 ], function(moduleName, constructorName) {
   describe(moduleName, function() {
