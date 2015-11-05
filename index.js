@@ -29,6 +29,13 @@ module.exports = {
   autoScaling: require('./autoScaling'),
 
   /**
+   * Returns a Promises compliant AWS.CloudFormation api.
+   *
+   * @param {object} options The AWS.CloudFormation constructor options.
+   */
+  cloudFormation: require('./cloudFormation'),
+
+  /**
    * Returns a Promises compliant AWS.CloudWatch api.
    *
    * @param {object} options The AWS.CloudWatch constructor options.
