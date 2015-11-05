@@ -22,19 +22,23 @@
   "author": "Will Vaughn <willieviseoae@gmail.com>",
   "contributors": [
     {
-      "name": "Jinsy A. Oommen",
-      "email": "jinsy.oommen@cascadeenergy.com"
+      "name": "Ben Cassidy",
+      "email": "ben.cassidy@cascadeenergy.com"
+    },
+    {
+      "name": "Bryan Crotaz",
+      "email": "bgcrotaz@hotmail.com"
     },
     {
       "name": "Charles Berube",
       "email": "charles.berube@cascadeenergy.com"
     },
     {
-      "name": "Simon R"
+      "name": "Jinsy A. Oommen",
+      "email": "jinsy.oommen@cascadeenergy.com"
     },
     {
-      "name": "Bryan Crotaz",
-      "email": "bgcrotaz@hotmail.com"
+      "name": "Simon R"
     }
   ],
   "license": "MIT",
