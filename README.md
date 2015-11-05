@@ -25,6 +25,7 @@ This is a list of the currently implemented clients:
 - [MetadataService](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/MetadataService.html)
 - [S3](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html)
 - [SES](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html)
+- [SNS](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SNS.html)
 - [SQS](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SQS.html)
 
 #### What this module does.
