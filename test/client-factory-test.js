@@ -11,6 +11,7 @@ var clientFactory = require('../index');
 
 describe('index client factory', function() {
   withData([
+    ['apiGateway', 'APIGateway'],
     ['autoScaling', 'AutoScaling'],
     ['cloudWatch', 'CloudWatch'],
     ['dynamoDb', 'DynamoDB'],
