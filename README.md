@@ -22,6 +22,7 @@ This is a list of the currently implemented clients:
 - [Kinesis](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Kinesis.html)
 - [MetadataService](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/MetadataService.html)
 - [S3](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html)
+- [SES](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html)
 - [SQS](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SQS.html)
 
 #### What this module does.

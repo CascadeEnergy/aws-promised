@@ -21,6 +21,7 @@ withData([
   ['kinesis', 'Kinesis'],
   ['metadataService', 'MetadataService'],
   ['s3', 'S3'],
+  ['ses', 'SES'],
   ['sqs', 'SQS']
 ], function(moduleName, constructorName) {
   describe(moduleName, function() {

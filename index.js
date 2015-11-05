@@ -99,6 +99,13 @@ module.exports = {
   s3: require('./s3'),
 
   /**
+   * Returns a Promises compliant AWS.SES api.
+   *
+   * @param {object} options The AWS.SES constructor options.
+   */
+  ses: require('./ses'),
+
+  /**
    * Returns a Promises compliant AWS.SQS api.
    *
    * @param {object} options The AWS.SQS constructor options.

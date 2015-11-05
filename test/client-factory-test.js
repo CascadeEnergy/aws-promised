@@ -22,6 +22,7 @@ describe('index client factory', function() {
     ['kinesis', 'Kinesis'],
     ['metadataService', 'MetadataService'],
     ['s3', 'S3'],
+    ['ses', 'SES'],
     ['sqs', 'SQS']
   ], function(factoryMethod) {
     it(factoryMethod + ' is a function', function() {
