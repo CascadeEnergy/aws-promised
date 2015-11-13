@@ -22,6 +22,7 @@ This is a list of the currently implemented clients:
 - [ELB](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/ELB.html)
 - [IAM](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/IAM.html)
 - [Kinesis](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Kinesis.html)
+- [Lambda](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Lambda.html)
 - [MetadataService](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/MetadataService.html)
 - [S3](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html)
 - [SES](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html)
