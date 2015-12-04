@@ -14,6 +14,7 @@ describe('index client factory', function() {
     ['apiGateway', 'APIGateway'],
     ['autoScaling', 'AutoScaling'],
     ['cloudFormation', 'CloudFormation'],
+    ['cloudFront', 'CloudFront'],
     ['cloudWatch', 'CloudWatch'],
     ['dynamoDb', 'DynamoDB'],
     ['ec2', 'EC2'],

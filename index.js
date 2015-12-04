@@ -10,14 +10,21 @@
  * @type {{
  *  apiGateway: (*|exports|module.exports),
  *  autoScaling: (*|exports|module.exports),
+ *  cloudFormation: (*|exports|module.exports),
+ *  cloudFront: (*|exports|module.exports),
  *  cloudWatch: (*|exports|module.exports),
  *  dynamoDb: (*|exports|module.exports),
  *  ec2: (*|exports|module.exports),
  *  ecs: (*|exports|module.exports),
+ *  elastiCache: (*|exports|module.exports),
  *  elb: (*|exports|module.exports),
  *  iam: (*|exports|module.exports),
+ *  kinesis: (*|exports|module.exports),
+ *  lambda: (*|exports|module.exports),
  *  metadataService: (*|exports|module.exports)
  *  s3: (*|exports|module.exports)
+ *  ses: (*|exports|module.exports)
+ *  sns: (*|exports|module.exports)
  *  sqs: (*|exports|module.exports)
  * }}
  */
@@ -42,6 +49,13 @@ module.exports = {
    * @param {object} options The AWS.CloudFormation constructor options.
    */
   cloudFormation: require('./cloudFormation'),
+
+  /**
+   * Returns a Promises compliant AWS.CloudFront api.
+   *
+   * @param {object} options The AWS.CloudFront constructor options.
+   */
+  cloudFront: require('./cloudFront'),
 
   /**
    * Returns a Promises compliant AWS.CloudWatch api.
