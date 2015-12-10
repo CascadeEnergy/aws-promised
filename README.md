@@ -14,6 +14,7 @@ This is a list of the currently implemented clients:
 - [APIGateway](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/APIGateway.html)
 - [AutoScaling](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/AutoScaling.html)
 - [CloudFormation](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/CloudFormation.html)
+- [CloudFront](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/CloudFront.html)
 - [CloudWatch](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/CloudWatch.html)
 - [DynamoDB](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/DynamoDB.html)
 - [EC2](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/EC2.html)
@@ -52,13 +53,13 @@ are still available for use when you need them.
 
 For instance, the "Promised" methods return promises and not instances of
 [AWS.Request](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Request.html). So when you want to do something
-with AWS.Request (like open up a Node.js data stream from an s3 file) you're still able to use the original `getObject` 
+with AWS.Request (like open up a Node.js data stream from an s3 file) you're still able to use the original `getObject`
 method and `createReadStream`.
 
 **Why "Promised" and not "Async" suffix?**
 
 Astute users of `bluebird` will notice that this module doesn't use the default suffix of `Async` for the promisified
-methods. This is because the `AWS.Lambda` client has one single method which already uses that suffix -- `.invokeAsync`. 
+methods. This is because the `AWS.Lambda` client has one single method which already uses that suffix -- `.invokeAsync`.
 `bluebird` throws an error when trying to promisify an API which contains methods with the promisified suffix.
 
 #### Usage

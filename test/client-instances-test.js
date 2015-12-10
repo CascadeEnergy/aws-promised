@@ -12,6 +12,8 @@ var it = mocha.it;
 withData([
   ['apiGateway', 'APIGateway'],
   ['autoScaling', 'AutoScaling'],
+  ['cloudFormation', 'CloudFormation'],
+  ['cloudFront', 'CloudFront'],
   ['cloudWatch', 'CloudWatch'],
   ['dynamoDb', 'DynamoDB'],
   ['ec2', 'EC2'],
