@@ -21,6 +21,7 @@ This is a list of the currently implemented clients:
 - [ECS](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/ECS.html)
 - [ElastiCache](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/ElastiCache.html)
 - [ELB](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/ELB.html)
+- [ES (Elasticsearch)](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/ES.html)
 - [IAM](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/IAM.html)
 - [Kinesis](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Kinesis.html)
 - [Lambda](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Lambda.html)

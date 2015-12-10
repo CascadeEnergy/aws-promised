@@ -18,6 +18,7 @@
  *  ecs: (*|exports|module.exports),
  *  elastiCache: (*|exports|module.exports),
  *  elb: (*|exports|module.exports),
+ *  es: (*|exports|module.exports),
  *  iam: (*|exports|module.exports),
  *  kinesis: (*|exports|module.exports),
  *  lambda: (*|exports|module.exports),
@@ -98,6 +99,13 @@ module.exports = {
    * @param {object} options The AWS.ELB constructor options.
    */
   elb: require('./elb'),
+
+  /**
+   * Returns a Promises compliant AWS.ES api.
+   *
+   * @param {object} options The AWS.ES constructor options.
+   */
+  es: require('./es'),
 
   /**
    * Returns a Promises compliant AWS.IAM api.
