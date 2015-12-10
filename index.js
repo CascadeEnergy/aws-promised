@@ -15,6 +15,7 @@
  *  ec2: (*|exports|module.exports),
  *  ecs: (*|exports|module.exports),
  *  elb: (*|exports|module.exports),
+ *  es: (*|exports|module.exports),
  *  iam: (*|exports|module.exports),
  *  metadataService: (*|exports|module.exports)
  *  s3: (*|exports|module.exports)
@@ -84,6 +85,13 @@ module.exports = {
    * @param {object} options The AWS.ELB constructor options.
    */
   elb: require('./elb'),
+
+  /**
+   * Returns a Promises compliant AWS.ES api.
+   *
+   * @param {object} options The AWS.ES constructor options.
+   */
+  es: require('./es'),
 
   /**
    * Returns a Promises compliant AWS.IAM api.

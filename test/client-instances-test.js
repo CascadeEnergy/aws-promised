@@ -18,6 +18,7 @@ withData([
   ['ecs', 'ECS'],
   ['elastiCache', 'ElastiCache'],
   ['elb', 'ELB'],
+  ['es', 'ES'],
   ['iam', 'IAM'],
   ['kinesis', 'Kinesis'],
   ['lambda', 'Lambda'],
