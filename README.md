@@ -25,6 +25,7 @@ This is a list of the currently implemented clients:
 - [Kinesis](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Kinesis.html)
 - [Lambda](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Lambda.html)
 - [MetadataService](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/MetadataService.html)
+- [Route53](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Route53.html)
 - [S3](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html)
 - [SES](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html)
 - [SNS](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SNS.html)

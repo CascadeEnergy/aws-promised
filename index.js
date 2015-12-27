@@ -128,6 +128,13 @@ module.exports = {
   metadataService: require('./metadataService'),
 
   /**
+   * Returns a Promises compliant AWS.Route53 api.
+   *
+   * @param {object} options The AWS.Route53 constructor options.
+   */
+  route53: require('./route53'),
+
+  /**
    * Returns a Promises compliant AWS.S3 api.
    *
    * @param {object} options The AWS.S3 constructor options.
