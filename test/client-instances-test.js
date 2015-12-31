@@ -25,6 +25,7 @@ withData([
   ['kinesis', 'Kinesis'],
   ['lambda', 'Lambda'],
   ['metadataService', 'MetadataService'],
+  ['route53', 'Route53'],
   ['s3', 'S3'],
   ['ses', 'SES'],
   ['sns', 'SNS'],
