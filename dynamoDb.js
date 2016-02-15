@@ -8,6 +8,10 @@ function dynamoDb(options) {
   return promisifyAll(new AWS.DynamoDB(options));
 }
 
+function documentClient(options) {
+  return promisifyAll(new AWS.DynamoDB.DocumentClient(options));
+}
+
 /**
  * Returns an instance of AWS.DynamoDB which has Promise methods
  * suffixed by "Promised"
@@ -18,3 +22,14 @@ function dynamoDb(options) {
  * @param options
  */
 module.exports = memoize(dynamoDb);
+
+/**
+ * Returns an instance of AWS.DynamoDB.DocumentClient
+ * which has Promise methods suffixed by "Promised"
+ *
+ * e.g.
+ * get: getPromised
+ *
+ * @param options
+ */
+module.exports.documentClient = memoize(documentClient);

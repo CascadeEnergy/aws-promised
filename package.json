@@ -1,6 +1,6 @@
 {
   "name": "aws-promised",
-  "version": "2.6.0",
+  "version": "2.10.0",
   "description": "Provides Promises/A+ compliant version of all your favorite AWS SDK clients.",
   "main": "lib/aws-promised.js",
   "scripts": {
@@ -39,6 +39,10 @@
     },
     {
       "name": "Simon R"
+    },
+    {
+      "name": "Peter Mounce",
+      "email": "public@neverrunwithscissors.com"
     }
   ],
   "license": "MIT",

@@ -10,14 +10,22 @@
  * @type {{
  *  apiGateway: (*|exports|module.exports),
  *  autoScaling: (*|exports|module.exports),
+ *  cloudFormation: (*|exports|module.exports),
+ *  cloudFront: (*|exports|module.exports),
  *  cloudWatch: (*|exports|module.exports),
  *  dynamoDb: (*|exports|module.exports),
  *  ec2: (*|exports|module.exports),
  *  ecs: (*|exports|module.exports),
+ *  elastiCache: (*|exports|module.exports),
  *  elb: (*|exports|module.exports),
+ *  es: (*|exports|module.exports),
  *  iam: (*|exports|module.exports),
+ *  kinesis: (*|exports|module.exports),
+ *  lambda: (*|exports|module.exports),
  *  metadataService: (*|exports|module.exports)
  *  s3: (*|exports|module.exports)
+ *  ses: (*|exports|module.exports)
+ *  sns: (*|exports|module.exports)
  *  sqs: (*|exports|module.exports)
  * }}
  */
@@ -42,6 +50,13 @@ module.exports = {
    * @param {object} options The AWS.CloudFormation constructor options.
    */
   cloudFormation: require('./cloudFormation'),
+
+  /**
+   * Returns a Promises compliant AWS.CloudFront api.
+   *
+   * @param {object} options The AWS.CloudFront constructor options.
+   */
+  cloudFront: require('./cloudFront'),
 
   /**
    * Returns a Promises compliant AWS.CloudWatch api.
@@ -93,6 +108,13 @@ module.exports = {
   elb: require('./elb'),
 
   /**
+   * Returns a Promises compliant AWS.ES api.
+   *
+   * @param {object} options The AWS.ES constructor options.
+   */
+  es: require('./es'),
+
+  /**
    * Returns a Promises compliant AWS.IAM api.
    *
    * @param {object} options The AWS.IAM constructor options.
@@ -133,6 +155,13 @@ module.exports = {
    * @param {object} options The AWS.MetadataService constructor options.
    */
   metadataService: require('./metadataService'),
+
+  /**
+   * Returns a Promises compliant AWS.Route53 api.
+   *
+   * @param {object} options The AWS.Route53 constructor options.
+   */
+  route53: require('./route53'),
 
   /**
    * Returns a Promises compliant AWS.S3 api.
