@@ -1,7 +1,7 @@
 'use strict';
 
 var AWS = require('aws-sdk');
-var memoize = require('lodash/function/memoize');
+var memoize = require('./lib/util/memoizeWithOptions');
 var promisifyAll = require('./lib/util/promisifyAll');
 
 function cloudFormation(options) {

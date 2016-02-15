@@ -51,6 +51,13 @@ module.exports = {
   cloudWatch: require('./cloudWatch'),
 
   /**
+   * Returns a Promises compliant AWS.CognitoIdentity api.
+   *
+   * @param {object} options The AWS.CognitoIdentity constructor options.
+   */
+  cognitoIdentity: require('./cognitoIdentity'),
+
+  /**
    * Returns a Promises compliant AWS.DynamoDB api.
    *
    * @param {object} options The AWS.DynamoDB constructor options.
@@ -91,6 +98,20 @@ module.exports = {
    * @param {object} options The AWS.IAM constructor options.
    */
   iam: require('./iam'),
+
+  /**
+   * Returns a Promises compliant AWS.Iot api.
+   *
+   * @param {object} options The AWS.Iot constructor options.
+   */
+  iot: require('./iot'),
+
+  /**
+   * Returns a Promises compliant AWS.IotData api.
+   *
+   * @param {object} options The AWS.IotData constructor options.
+   */
+  iotData: require('./iotData'),
 
   /**
    * Returns a Promises compliant AWS.Kinesis api.
