@@ -27,6 +27,7 @@ describe('index client factory', function() {
     ['iot', 'Iot'],
     ['iotData', 'IotData'],
     ['kinesis', 'Kinesis'],
+    ['kms', 'KMS'],
     ['lambda', 'Lambda'],
     ['metadataService', 'MetadataService'],
     ['route53', 'Route53'],

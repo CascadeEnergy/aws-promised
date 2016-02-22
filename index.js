@@ -21,6 +21,7 @@
  *  es: (*|exports|module.exports),
  *  iam: (*|exports|module.exports),
  *  kinesis: (*|exports|module.exports),
+ *  kms: (*|exports|module.exports),
  *  lambda: (*|exports|module.exports),
  *  metadataService: (*|exports|module.exports)
  *  s3: (*|exports|module.exports)
@@ -141,6 +142,13 @@ module.exports = {
    * @param {object} options The AWS.Kinesis constructor options.
    */
   kinesis: require('./kinesis'),
+
+  /**
+   * Returns a Promises compliant AWS.KMS api.
+   *
+   * @param {object} options The AWS.KMS constructor options.
+   */
+  kms: require('./kms'),
 
   /**
    * Returns a Promises compliant AWS.Lambda api.
