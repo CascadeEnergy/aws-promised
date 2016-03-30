@@ -60,6 +60,13 @@ module.exports = {
   cloudFront: require('./cloudFront'),
 
   /**
+   * Returns a Promises compliant AWS.CloudTrail api.
+   *
+   * @param {object} options The AWS.CloudTrail constructor options.
+   */
+  cloudTrail: require('./cloudTrail'),
+
+  /**
    * Returns a Promises compliant AWS.CloudWatch api.
    *
    * @param {object} options The AWS.CloudWatch constructor options.

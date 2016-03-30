@@ -14,6 +14,7 @@ withData([
   ['autoScaling', 'AutoScaling'],
   ['cloudFormation', 'CloudFormation'],
   ['cloudFront', 'CloudFront'],
+  ['cloudTrail', 'CloudTrail'],
   ['cloudWatch', 'CloudWatch'],
   ['cognitoIdentity', 'CognitoIdentity'],
   ['dynamoDb', 'DynamoDB'],

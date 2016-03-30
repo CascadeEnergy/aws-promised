@@ -13,7 +13,7 @@ function kms(options) {
  * suffixed by "Promised"
  *
  * e.g.
- * listObjects : listObjectsPromised
+ * listKeys : listKeysPromised
  *
  * @param options
  */
