@@ -15,6 +15,7 @@ describe('index client factory', function() {
     ['autoScaling', 'AutoScaling'],
     ['cloudFormation', 'CloudFormation'],
     ['cloudFront', 'CloudFront'],
+    ['cloudTrail', 'CloudTrail'],
     ['cloudWatch', 'CloudWatch'],
     ['cognitoIdentity', 'CognitoIdentity'],
     ['dynamoDb', 'DynamoDB'],

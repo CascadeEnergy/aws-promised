@@ -15,6 +15,7 @@ This is a list of the currently implemented clients:
 - [AutoScaling](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/AutoScaling.html)
 - [CloudFormation](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/CloudFormation.html)
 - [CloudFront](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/CloudFront.html)
+- [CloudTrail](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/CloudTrail.html)
 - [CloudWatch](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/CloudWatch.html)
 - [CognitoIdentity](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/CognitoIdentity.html)
 - [DynamoDB](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/DynamoDB.html)
