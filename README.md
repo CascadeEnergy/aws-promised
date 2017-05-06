@@ -28,6 +28,7 @@ This is a list of the currently implemented clients:
 - [IoT](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Iot.html)
 - [IoTData](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/IotData.html)
 - [Kinesis](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Kinesis.html)
+- [KinesisAnalytics](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/KinesisAnalytics.html)
 - [KMS](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/KMS.html)
 - [Lambda](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Lambda.html)
 - [MetadataService](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/MetadataService.html)
