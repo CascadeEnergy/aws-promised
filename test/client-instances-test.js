@@ -27,6 +27,7 @@ withData([
   ['iot', 'Iot'],
   ['iotData', 'IotData'],
   ['kinesis', 'Kinesis'],
+  ['kinesisAnalytics', 'KinesisAnalytics'],
   ['kms', 'KMS'],
   ['lambda', 'Lambda'],
   ['metadataService', 'MetadataService'],

@@ -12,6 +12,7 @@
  *  autoScaling: (*|exports|module.exports),
  *  cloudFormation: (*|exports|module.exports),
  *  cloudFront: (*|exports|module.exports),
+ *  cloudTrail: (*|exports|module.exports),
  *  cloudWatch: (*|exports|module.exports),
  *  dynamoDb: (*|exports|module.exports),
  *  ec2: (*|exports|module.exports),
@@ -21,6 +22,7 @@
  *  es: (*|exports|module.exports),
  *  iam: (*|exports|module.exports),
  *  kinesis: (*|exports|module.exports),
+ *  kinesisAnalytics: (*|exports|module.exports),
  *  kms: (*|exports|module.exports),
  *  lambda: (*|exports|module.exports),
  *  metadataService: (*|exports|module.exports)
@@ -150,6 +152,13 @@ module.exports = {
    */
   kinesis: require('./kinesis'),
 
+  /**
+   * Returns a Promises compliant AWS.KinesisAnalytics api.
+   *
+   * @param {object} options The AWS.KinesisAnalytics constructor options.
+   */
+  kinesisAnalytics: require('./kinesisAnalytics'),
+  
   /**
    * Returns a Promises compliant AWS.KMS api.
    *

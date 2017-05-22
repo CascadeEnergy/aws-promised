@@ -13,7 +13,7 @@ function kinesis(options) {
  * suffixed by "Promised"
  *
  * e.g.
- * listObjects : listObjectsPromised
+ * listStreams : listStreamsPromised
  *
  * @param options
  */
